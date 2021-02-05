@@ -2,8 +2,8 @@
 
     <div class="container">
         <div class="card" :style="cssProps">
-            <img src="../assets/chip-light.svg" alt="chip">
-            <img class="vendor-img" :src="vendorImg" alt=""> 
+            <img :src="vendorChip" alt="chip">
+            <img class="vendor-img" :src="vendorImg" alt="vendor"> 
             <p class="card-number">{{ number }}</p>
             <p class="cardholder-valid">cardholder name</p>
             <p class="cardholder-valid">valid until</p>
@@ -83,7 +83,15 @@ export default {
         else{
           return ""
           }
+        },
+
+      vendorChip(){
+        if(this.vendor === "bitcoin"){
+          return require("@/assets/chip-dark.svg")
+        } else {
+          return require("@/assets/chip-light.svg")
         }
+      }
   },
 }
 </script>

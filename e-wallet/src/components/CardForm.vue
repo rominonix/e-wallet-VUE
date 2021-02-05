@@ -4,8 +4,8 @@
     <label for="number">Card Number</label>
     <input 
     type="text" 
-    placeholder=" XXXX XXXX XXXX XXXX"
-    maxlength="16"
+    placeholder="XXXX XXXX XXXX XXXX"
+    maxlength="19"
     required 
     v-model="form.number" 
     @keyup="emitNumberToParent">
@@ -86,6 +86,13 @@ data(){ return {
 
 methods: {
     emitNumberToParent () {
+      const numberFormat = this.form.number.split(" ");
+      if (
+        numberFormat[numberFormat.length - 1].length === 4 &&
+        this.form.number.length < 19
+      ) {
+        this.form.number += " ";
+      }
       this.$emit('childToParent', this.form.number)
     },
 

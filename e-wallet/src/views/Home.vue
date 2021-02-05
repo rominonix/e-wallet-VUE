@@ -60,7 +60,6 @@ export default {
 button {
     position: relative;
     top: 8rem;
-    /* bottom: 5rem; */
     width: 300px;
     height: 60px;
     border: 2px solid black;
@@ -69,7 +68,6 @@ button {
     font-size: 1.2rem;
     font-weight: 500;
     margin-top: 2rem;
-    /* margin-bottom: 2rem; */
     background-color: white;
     cursor: pointer;
 }
