@@ -31,6 +31,3 @@ Placera arrayen med alla kort i root-komponenten på samma sätt som Mini Librar
 `build`-mappen innehåller en färdigbyggd version av appen. Öppna mappen med VS Code och öppna `index.html` med LiveServer för att se hur den ska se ut och fungera.
 
 
-#### Utmaning!
-Lägg även till funktionaliteten att ta bort ett kort genom att lägga till en knapp.
-När man trycker på den knappen ska en bekräftelseruta dyka upp, om man bekräftar så ska kortet raderas.
